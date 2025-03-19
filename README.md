@@ -50,23 +50,6 @@ Chaque sous-projet est associé à une branche pour un travail indépendant :
     cd Data_Visulisation_with_D3
     ```
 
-3. Choisissez la branche que vous souhaitez travailler, par exemple pour **Scatterplot** :
-    ```bash
-    git checkout scatterplot-branch
-    ```
-
-4. Installez les dépendances nécessaires (si applicable) :
-    ```bash
-    npm install
-    ```
-
-5. Ouvrez le fichier HTML dans votre navigateur ou servez-le via un serveur local :
-    ```bash
-    npm start
-    ```
-
----
-
 ## **2. Contribuer au projet**
 
 Si vous souhaitez contribuer, voici quelques étapes à suivre :
