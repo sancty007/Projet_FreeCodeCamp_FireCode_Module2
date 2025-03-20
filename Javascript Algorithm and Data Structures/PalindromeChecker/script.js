@@ -23,16 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     result.className = isPalindrome ? "palindrome" : "not-palindrome";
   });
 
-  // Function to check if a string is a palindrome
-  function checkPalindrome(str) {
-    // Remove all non-alphanumeric characters and convert to lowercase
-    const cleanString = str.replace(/[^0-9a-z]/gi, "").toLowerCase();
-
-    // Check if the string is a palindrome
-    const reversedString = cleanString.split("").reverse().join("");
-    return cleanString === reversedString;
-  }
-
   // Add event listener for Enter key
   textInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
@@ -40,3 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Function to check if a string is a palindrome
+function checkPalindrome(str) {
+  // Remove all non-alphanumeric characters and convert to lowercase
+  const cleanString = str.replace(/[^0-9a-z]/gi, "").toLowerCase();
+
+  // Check if the string is a palindrome
+  const reversedString = cleanString.split("").reverse().join("");
+  return cleanString === reversedString;
+}
