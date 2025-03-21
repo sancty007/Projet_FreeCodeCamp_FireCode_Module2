@@ -18,3 +18,12 @@ document.getElementById("check-btn").addEventListener("click", function() {
 });
 
 
+document.getElementById("clear-btn").addEventListener("click", function() {
+    document.getElementById("user-input").value = "";
+    document.getElementById("results-div").textContent = "";
+});
+
+        document.getElementById("clear-btn").addEventListener("click", function() {
+            document.getElementById("user-input").value = "";
+            document.getElementById("results-div").textContent = "";
+        });
