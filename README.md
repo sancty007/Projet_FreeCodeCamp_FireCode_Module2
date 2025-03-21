@@ -78,6 +78,6 @@ Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus de dét
 
 ## **Conclusion**
 
-Ces projets de visualisation de données utilisent D3.js pour explorer différents types de visualisations interactives. Vous pouvez contribuer, explorer ou simplement apprendre à travers ces exemples. Pour plus de détails, consultez les branches respectives et les fichiers associés à chaque sous-projet.
+Ces projets de visualisation de données utilisent D3.js pour explorer différents types de visualisations interactives. Vous pouvez contribuer, explorer ou simplement apprendre à travers ces exemples.
 
 
