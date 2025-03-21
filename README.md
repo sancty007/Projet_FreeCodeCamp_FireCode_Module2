@@ -78,6 +78,6 @@ Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus de dét
 
 ## **Conclusion**
 
-Ces projets de visualisation de données utilisent D3.js pour explorer différents types de visualisations interactives. Vous pouvez contribuer, explorer ou simplement apprendre à travers ces exemples.
+Le projet **JavaScript Algorithms and Data Structures** propose des défis d'algorithmes en JavaScript, tandis que **Data Visualization with D3** explore la visualisation interactive des données avec **D3.js**. Ces projets permettent d’améliorer les compétences en programmation et en data storytelling. 🚀
 
 
