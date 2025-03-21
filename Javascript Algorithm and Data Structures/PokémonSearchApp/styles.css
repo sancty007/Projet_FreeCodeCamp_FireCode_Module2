@@ -17,8 +17,12 @@ body {
 
 #search-button {
     color: black;
+
 }
 
+#search-button {
+    border-radius: 30px;
+}
 
 input,
 button {
