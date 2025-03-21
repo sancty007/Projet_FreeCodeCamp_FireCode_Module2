@@ -44,6 +44,7 @@ document.getElementById("search-button").addEventListener("click", () => {
       });
     })
     .catch((error) => {
-      console.log(error.message);
+      alert(`Erreur: ${error.message}`);
+      document.getElementById("pokemon-name").textContent = "";
     });
 });
