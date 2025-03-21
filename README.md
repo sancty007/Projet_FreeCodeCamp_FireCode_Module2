@@ -25,19 +25,6 @@ Data Visualization with D3
 ├───Scatterplot        # Visualisation de données sous forme de graphique de dispersion
 └───Treemap            # Visualisation de données sous forme de diagramme en treemap
 ```
-
-### **Branches associées**
-
-Chaque sous-projet est associé à une branche pour un travail indépendant :
-
-- **Barmap** : `barmap-branch`
-- **Choropleth** : `choropleth-branch`
-- **Heatmap** : `heatmap-branch`
-- **Scatterplot** : `scatterplot-branch`
-- **Treemap** : `treemap-branch`
-
----
-
 ### **Démarrer le projet**
 
 1. Clonez ce projet sur votre machine locale :
