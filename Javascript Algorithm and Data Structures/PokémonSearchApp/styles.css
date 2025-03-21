@@ -27,6 +27,12 @@ button {
     font-size: 16px;
 }
 
+#stats {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
 button {
     cursor: pointer;
     background-color: #ffcb05;
