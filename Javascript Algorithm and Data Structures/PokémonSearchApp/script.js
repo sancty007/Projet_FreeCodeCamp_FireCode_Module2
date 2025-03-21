@@ -4,13 +4,13 @@ document.getElementById("search-button").addEventListener("click", () => {
     .getElementById("search-input")
     .value.toLowerCase();
 
-  // Check if input is empty
   if (!inputValue) return;
 
   fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${inputValue}`)
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Pokémon non trouvé");
+        alert("Pokémon non trouvé");
+        return;
       }
       return response.json();
     })
