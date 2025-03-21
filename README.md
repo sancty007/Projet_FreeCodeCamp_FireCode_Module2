@@ -5,7 +5,7 @@
 
 ## 🚀 **Projets de Visualisation de Données avec D3 et Lambda**
 
-Ce dépôt contient deux grands projets de visualisation de données : **Data Visualization with D3** et **Lambda**. Chaque projet contient plusieurs sous-projets dédiés à différents types de visualisations, et chaque sous-projet possède sa propre branche.
+Ce dépôt contient deux grands projets de visualisation de données : **Data Visualization with D3** et **JavaScript Algorithms and Data Structures**. Chaque projet contient plusieurs sous-projets dédiés à différents types de visualisations .
 
 ---
 
@@ -25,19 +25,19 @@ Data Visualization with D3
 ├───Scatterplot        # Visualisation de données sous forme de graphique de dispersion
 └───Treemap            # Visualisation de données sous forme de diagramme en treemap
 ```
+Le projet **JavaScript Algorithms and Data Structures** contient plusieurs sous-projets, chacun correspondant à un défi d'algorithme spécifique :
 
-### **Branches associées**
+```
+JavaScript Algorithms and Data Structures
+│
+├───Build_a_Cash_Register        # Implémentation d'une caisse enregistreuse en JavaScript
+├───palindrome                   # Vérification des palindromes
+├───Pokémon_Search_App           # Application de recherche de Pokémon
+├───Roman_Numeral_Converter      # Conversion de nombres romains
+└───Telephone_Number_Validator   # Validation des numéros de téléphone
+```
 
-Chaque sous-projet est associé à une branche pour un travail indépendant :
-
-- **Barmap** : `barmap-branch`
-- **Choropleth** : `choropleth-branch`
-- **Heatmap** : `heatmap-branch`
-- **Scatterplot** : `scatterplot-branch`
-- **Treemap** : `treemap-branch`
-
----
-
+Ces projets permettent d'explorer des concepts fondamentaux en JavaScript et d'améliorer les compétences en algorithmie et manipulation de données.
 ### **Démarrer le projet**
 
 1. Clonez ce projet sur votre machine locale :
@@ -78,6 +78,6 @@ Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus de dét
 
 ## **Conclusion**
 
-Ces projets de visualisation de données utilisent D3.js pour explorer différents types de visualisations interactives. Vous pouvez contribuer, explorer ou simplement apprendre à travers ces exemples. Pour plus de détails, consultez les branches respectives et les fichiers associés à chaque sous-projet.
+Le projet **JavaScript Algorithms and Data Structures** propose des défis d'algorithmes en JavaScript, tandis que **Data Visualization with D3** explore la visualisation interactive des données avec **D3.js**. Ces projets permettent d’améliorer les compétences en programmation et en data storytelling. 🚀
 
 
