@@ -61,4 +61,5 @@ document.getElementById("purchase-btn").addEventListener("click", function() {
     } else {
         changeDue.textContent = `Status: OPEN ${changeArr.join(" ")}`;
     }
+    
 });
