@@ -5,7 +5,7 @@
 
 ## 🚀 **Projets de Visualisation de Données avec D3 et Lambda**
 
-Ce dépôt contient deux grands projets de visualisation de données : **Data Visualization with D3** et **Lambda**. Chaque projet contient plusieurs sous-projets dédiés à différents types de visualisations, et chaque sous-projet possède sa propre branche.
+Ce dépôt contient deux grands projets de visualisation de données : **Data Visualization with D3** et **JavaScript Algorithms and Data Structures**. Chaque projet contient plusieurs sous-projets dédiés à différents types de visualisations .
 
 ---
 
@@ -25,6 +25,19 @@ Data Visualization with D3
 ├───Scatterplot        # Visualisation de données sous forme de graphique de dispersion
 └───Treemap            # Visualisation de données sous forme de diagramme en treemap
 ```
+Le projet **JavaScript Algorithms and Data Structures** contient plusieurs sous-projets, chacun correspondant à un défi d'algorithme spécifique :
+
+```
+JavaScript Algorithms and Data Structures
+│
+├───Build_a_Cash_Register        # Implémentation d'une caisse enregistreuse en JavaScript
+├───palindrome                   # Vérification des palindromes
+├───Pokémon_Search_App           # Application de recherche de Pokémon
+├───Roman_Numeral_Converter      # Conversion de nombres romains
+└───Telephone_Number_Validator   # Validation des numéros de téléphone
+```
+
+Ces projets permettent d'explorer des concepts fondamentaux en JavaScript et d'améliorer les compétences en algorithmie et manipulation de données.
 ### **Démarrer le projet**
 
 1. Clonez ce projet sur votre machine locale :
