@@ -15,20 +15,8 @@ document.getElementById("search-button").addEventListener("click", () => {
       return response.json();
     })
     .then((data) => {
-      document.getElementById("pokemon-name").textContent =
-        data.name.toUpperCase();
-      document.getElementById("pokemon-id").textContent = `#${data.id}`;
-      document.getElementById("weight").textContent = `Poids: ${data.weight}`;
-      document.getElementById("height").textContent = `Taille: ${data.height}`;
-
-      document.getElementById("hp").textContent = data.stats[0].base_stat;
-      document.getElementById("attack").textContent = data.stats[1].base_stat;
-      document.getElementById("defense").textContent = data.stats[2].base_stat;
-      document.getElementById("special-attack").textContent =
-        data.stats[3].base_stat;
-      document.getElementById("special-defense").textContent =
-        data.stats[4].base_stat;
-      document.getElementById("speed").textContent = data.stats[5].base_stat;
+      // update pokemon
+      updatePokemonInfo(data);
 
       const sprite = document.getElementById("sprite");
       sprite.src = data.sprites.front_default;
@@ -48,3 +36,22 @@ document.getElementById("search-button").addEventListener("click", () => {
       document.getElementById("pokemon-name").textContent = "";
     });
 });
+
+function updatePokemonInfo(data) {
+  const elements = {
+    "pokemon-name": data.name.toUpperCase(),
+    "pokemon-id": `#${data.id}`,
+    weight: `Poids: ${data.weight}`,
+    height: `Taille: ${data.height}`,
+    hp: data.stats[0].base_stat,
+    attack: data.stats[1].base_stat,
+    defense: data.stats[2].base_stat,
+    "special-attack": data.stats[3].base_stat,
+    "special-defense": data.stats[4].base_stat,
+    speed: data.stats[5].base_stat,
+  };
+
+  for (const id in elements) {
+    document.getElementById(id).textContent = elements[id];
+  }
+}
