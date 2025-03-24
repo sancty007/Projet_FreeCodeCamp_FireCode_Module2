@@ -1,43 +1,56 @@
-document.getElementById("search-button").addEventListener("click", () => {
-  // Get the input value
-  const inputValue = document
-    .getElementById("search-input")
-    .value.toLowerCase();
+document
+  .getElementById("search-button")
+  .addEventListener("click", searchPokemon);
 
+function searchPokemon() {
+  const inputValue = getSearchInputValue();
   if (!inputValue) return;
 
-  fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${inputValue}`)
-    .then((response) => {
-      if (!response.ok) {
-        alert("Pokémon non trouvé");
-        return;
-      }
-      return response.json();
-    })
-    .then((data) => {
-      // update pokemon
-      updatePokemonInfo(data);
+  fetchPokemonData(inputValue).then(updatePokemonInfo).catch(handleError);
+}
 
-      const sprite = document.getElementById("sprite");
-      sprite.src = data.sprites.front_default;
-      sprite.alt = data.name;
+function getSearchInputValue() {
+  return document.getElementById("search-input").value.toLowerCase();
+}
 
-      const typesContainer = document.getElementById("types");
-      typesContainer.innerHTML = "";
+function fetchPokemonData(inputValue) {
+  return fetch(
+    `https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${inputValue}`
+  ).then(handleFetchResponse);
+}
 
-      data.types.forEach((type) => {
-        const typeElement = document.createElement("p");
-        typeElement.textContent = type.type.name.toUpperCase();
-        typesContainer.appendChild(typeElement);
-      });
-    })
-    .catch((error) => {
-      alert(`Erreur: ${error.message}`);
-      document.getElementById("pokemon-name").textContent = "";
-    });
-});
+function handleFetchResponse(response) {
+  if (!response.ok) {
+    alert("Pokémon non trouvé");
+    return;
+  }
+  return response.json();
+}
 
 function updatePokemonInfo(data) {
+  updatePokemonSprite(data);
+  updatePokemonTypes(data);
+  updatePokemonStats(data);
+}
+
+function updatePokemonSprite(data) {
+  const sprite = document.getElementById("sprite");
+  sprite.src = data.sprites.front_default;
+  sprite.alt = data.name;
+}
+
+function updatePokemonTypes(data) {
+  const typesContainer = document.getElementById("types");
+  typesContainer.innerHTML = "";
+
+  data.types.forEach((type) => {
+    const typeElement = document.createElement("p");
+    typeElement.textContent = type.type.name.toUpperCase();
+    typesContainer.appendChild(typeElement);
+  });
+}
+
+function updatePokemonStats(data) {
   const elements = {
     "pokemon-name": data.name.toUpperCase(),
     "pokemon-id": `#${data.id}`,
@@ -54,4 +67,9 @@ function updatePokemonInfo(data) {
   for (const id in elements) {
     document.getElementById(id).textContent = elements[id];
   }
+}
+
+function handleError(error) {
+  alert(`Erreur: ${error.message}`);
+  document.getElementById("pokemon-name").textContent = "";
 }
