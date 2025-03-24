@@ -1,42 +1,27 @@
+import { checkPalindrome } from "./utils/checkPalindrome.js";
+import { convertToLowerCase } from "./utils/convertToLowerCase.js";
+import { displayResult } from "./utils/displayResult.js";
+import { ifIsEmptyString } from "./utils/ifIsEmptyString.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const checkBtn = document.getElementById("check-btn");
   const textInput = document.getElementById("text-input");
   const result = document.getElementById("result");
 
   checkBtn.addEventListener("click", () => {
-    // Get the input value
-    const inputValue = textInput.value;
+    const inputValue = textInput.value.trim(); // Supprime les espaces(trim)
 
-    // Check if input is empty
-    if (!inputValue) {
-      alert("Please input a value");
-      return;
-    }
+    ifIsEmptyString(inputValue);
 
-    // Check if it's a palindrome
-    const isPalindrome = checkPalindrome(inputValue);
+    const normalizedInput = convertToLowerCase(inputValue);
+    const isPalindrome = checkPalindrome(normalizedInput);
 
-    // Display the result
-    result.textContent = `${inputValue} is ${
-      isPalindrome ? "a" : "not a"
-    } palindrome.`;
-    result.className = isPalindrome ? "palindrome" : "not-palindrome";
+    displayResult(inputValue, isPalindrome);
   });
 
-  // Add event listener for Enter key
   textInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
       checkBtn.click();
     }
   });
 });
-
-// Function to check if a string is a palindrome
-function checkPalindrome(str) {
-  // Remove all non-alphanumeric characters and convert to lowercase
-  const cleanString = str.replace(/[^0-9a-z]/gi, "").toLowerCase();
-
-  // Check if the string is a palindrome
-  const reversedString = cleanString.split("").reverse().join("");
-  return cleanString === reversedString;
-}
